@@ -7,5 +7,5 @@
     android:layout_below="@id/empty_text"
     android:layout_centerHorizontal="true"
     android:scaleType="center"
-    android:src="@drawable/ic_refresh_white_36dp"
+    android:src="@drawable/ic_menu_refresh_holo_dark"
     android:visibility="gone" />
