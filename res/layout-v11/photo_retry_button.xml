@@ -8,5 +8,5 @@
     android:layout_centerHorizontal="true"
     android:background="?android:attr/selectableItemBackground"
     android:scaleType="center"
-    android:src="@drawable/ic_menu_refresh_holo_dark"
+    android:src="@drawable/ic_refresh_white_36dp"
     android:visibility="gone" />
