@@ -16,7 +16,7 @@ LOCAL_PATH:= $(call my-dir)
 
 #Include res dir from photoviewer
 photo_dir := ../res ../activity/res
-res_dirs := $(photo_dir) res
+res_dirs := $(photo_dir) res ../../../../$(SUPPORT_LIBRARY_ROOT)/compat/res
 
 ##################################################
 # Build APK
@@ -33,7 +33,7 @@ LOCAL_SRC_FILES := $(call all-java-files-under, $(src_dirs)) \
         $(call all-logtags-files-under, $(src_dirs))
 LOCAL_RESOURCE_DIR := $(addprefix $(LOCAL_PATH)/, $(res_dirs))
 LOCAL_AAPT_FLAGS := --auto-add-overlay
-LOCAL_AAPT_FLAGS += --extra-packages com.android.ex.photo
+LOCAL_AAPT_FLAGS += --extra-packages com.android.ex.photo:android.support.compat
 
 include $(BUILD_PACKAGE)
 
