@@ -22,14 +22,14 @@ appcompat_res_dirs := appcompat/res res
 LOCAL_MODULE := libphotoviewer_appcompat
 
 LOCAL_JAVA_LIBRARIES := \
-    android-support-annotations
+    androidx.annotation_annotation
 
 LOCAL_STATIC_ANDROID_LIBRARIES := \
-    android-support-compat \
-    android-support-core-ui \
-    android-support-core-utils \
-    android-support-fragment \
-    android-support-v7-appcompat
+    androidx.core_core \
+    androidx.legacy_legacy-support-core-ui \
+    androidx.legacy_legacy-support-core-utils \
+    androidx.fragment_fragment \
+    androidx.appcompat_appcompat
 
 LOCAL_SDK_VERSION := current
 LOCAL_SRC_FILES := \
@@ -50,13 +50,13 @@ activity_res_dirs := activity/res res
 LOCAL_MODULE := libphotoviewer
 
 LOCAL_JAVA_LIBRARIES := \
-    android-support-annotations
+    androidx.annotation_annotation
 
 LOCAL_STATIC_ANDROID_LIBRARIES := \
-    android-support-compat \
-    android-support-core-ui \
-    android-support-core-utils \
-    android-support-fragment
+    androidx.core_core \
+    androidx.legacy_legacy-support-core-ui \
+    androidx.legacy_legacy-support-core-utils \
+    androidx.fragment_fragment
 
 LOCAL_SDK_VERSION := current
 LOCAL_SRC_FILES := \
