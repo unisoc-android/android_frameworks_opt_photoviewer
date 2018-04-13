@@ -22,13 +22,13 @@ src_dirs := src
 LOCAL_PACKAGE_NAME := PhotoViewerSample
 
 LOCAL_JAVA_LIBRARIES := \
-    android-support-annotations
+    androidx.annotation_annotation
 
 LOCAL_STATIC_ANDROID_LIBRARIES := \
-    android-support-compat \
-    android-support-core-ui \
-    android-support-core-utils \
-    android-support-fragment \
+    androidx.core_core \
+    androidx.legacy_legacy-support-core-ui \
+    androidx.legacy_legacy-support-core-utils \
+    androidx.fragment_fragment \
     libphotoviewer
 
 LOCAL_SDK_VERSION := current
@@ -48,15 +48,15 @@ src_dirs := src
 LOCAL_PACKAGE_NAME := AppcompatPhotoViewerSample
 
 LOCAL_JAVA_LIBRARIES := \
-    android-support-annotations
+    androidx.annotation_annotation
 
 LOCAL_STATIC_ANDROID_LIBRARIES := \
-    android-support-compat \
-    android-support-core-ui \
-    android-support-core-utils \
-    android-support-fragment \
-    android-support-media-compat \
-    android-support-v7-appcompat \
+    androidx.core_core \
+    androidx.legacy_legacy-support-core-ui \
+    androidx.legacy_legacy-support-core-utils \
+    androidx.fragment_fragment \
+    androidx.media_media \
+    androidx.appcompat_appcompat \
     libphotoviewer_appcompat
 
 LOCAL_SDK_VERSION := current
