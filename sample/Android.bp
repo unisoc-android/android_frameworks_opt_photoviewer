@@ -18,13 +18,13 @@
 android_app {
     name: "PhotoViewerSample",
 
-    libs: ["android-support-annotations"],
+    libs: ["androidx.annotation_annotation"],
 
     static_libs: [
-        "android-support-compat",
-        "android-support-core-ui",
-        "android-support-core-utils",
-        "android-support-fragment",
+        "androidx.core_core",
+        "androidx.legacy_legacy-support-core-ui",
+        "androidx.legacy_legacy-support-core-utils",
+        "androidx.fragment_fragment",
         "libphotoviewer",
     ],
 
@@ -42,15 +42,15 @@ android_app {
 android_app {
     name: "AppcompatPhotoViewerSample",
 
-    libs: ["android-support-annotations"],
+    libs: ["androidx.annotation_annotation"],
 
     static_libs: [
-        "android-support-compat",
-        "android-support-core-ui",
-        "android-support-core-utils",
-        "android-support-fragment",
-        "android-support-media-compat",
-        "android-support-v7-appcompat",
+        "androidx.core_core",
+        "androidx.legacy_legacy-support-core-ui",
+        "androidx.legacy_legacy-support-core-utils",
+        "androidx.fragment_fragment",
+        "androidx.media_media",
+        "androidx.appcompat_appcompat",
         "libphotoviewer_appcompat",
     ],
 
