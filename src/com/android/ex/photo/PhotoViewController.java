@@ -298,8 +298,10 @@ public class PhotoViewController implements
                     && !Util.isTouchExplorationEnabled(mAccessibilityManager);
             mActionBarTitle = savedInstanceState.getString(STATE_ACTIONBARTITLE_KEY);
             mActionBarSubtitle = savedInstanceState.getString(STATE_ACTIONBARSUBTITLE_KEY);
-            mEnterAnimationFinished = savedInstanceState.getBoolean(
-                    STATE_ENTERANIMATIONFINISHED_KEY, false);
+            /*Unisoc:1149289 Message add picture into attachment and scan the picture in split screen mode,
+            after exit the screen mode, the picture reload abnormal*/
+            //mEnterAnimationFinished = savedInstanceState.getBoolean(
+            //        STATE_ENTERANIMATIONFINISHED_KEY, false);
         } else {
             mFullScreen = mActionBarHiddenInitially;
         }
@@ -902,7 +904,11 @@ public class PhotoViewController implements
         final int position = mViewPager.getCurrentItem();
         final Cursor cursor = mAdapter.getCursor();
 
-        if (cursor == null) {
+        /*Unisoc:1153115, multi-thread access sqlite cause the cursor
+        * closed, if we continue access the sqlite, IllegalSateException
+        * will occured.
+        */
+        if (cursor == null || cursor.isClosed()) {
             return null;
         }
 
